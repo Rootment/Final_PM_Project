@@ -1,0 +1,12 @@
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      <ion-label>{{ item.label }}</ion-label>
+      <ion-checkbox [(ngModel)]="item.checked"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+  <div align="middle">
+    <ion-button (click)="dismissModal()">Close</ion-button>
+    <ion-button (click)="submit()">Submit</ion-button>
+  </div>
+</ion-content>

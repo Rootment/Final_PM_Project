@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Hlavní stránka
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div>
+    <!--dodělat overflow aby bylo scroll tlacitko-->>
+    <div style="max-height: 100px"  *ngIf="countriesDataArray.length > 0">
+      <h2 align="middle">Your selected countries:</h2>
+      <ion-item *ngFor="let item of countriesDataArray">
+        <ion-item [routerLink]="['/detail',item[0].capital[0]]" (click)="sendData(item)">
+          {{item[0].name.common}}
+        </ion-item>
+        <ion-button id="znacka" fill="clear" size="small">
+          <ion-icon slot="start" name="star"></ion-icon>
+          <h2>{{ item[0].flag }}</h2>
+          <ion-icon slot="end" name="star"></ion-icon>
+        </ion-button>
+      </ion-item>
+    </div>
+  </div>
+  <div style="margin-top: 200px;"id="container">
+    <ion-button (click)="openModal()">openModal</ion-button>
+
+    <ion-button (click)="presentAlert()">Turn on Alerts</ion-button>
+    <p>{{ handlerMessage }}</p>
+    <p>{{ roleMessage }}</p>
+  </div>
+
+</ion-content>
