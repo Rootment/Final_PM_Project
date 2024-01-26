@@ -15,7 +15,7 @@ import { AlertController } from '@ionic/angular';
 
 export class HomePage {
 
-  countriesDataArray: any[] = [];
+  animalsDataArray: any[] = [];
   handlerMessage = '';
   roleMessage ='';
   
@@ -54,18 +54,18 @@ It feels like you don't want to`);
  
     
        checkName();*/
-       const getCountriesData =async () => {
+       const getAnimalsData =async () => {
         const {value} = await Preferences.get({
           key:"homeFetchData",
         });
         if (value) {
           const fetchedItems = JSON.parse(value);
-          this.countriesDataArray = fetchedItems;
+          this.animalsDataArray = fetchedItems;
         }
         //alert(`Hello ${value}`);
        }
       
-       getCountriesData();
+       getAnimalsData();
        // když to zakomentujeme tak to načteme ale nepoužijeme ->
        // to znamena že by po refreshi stejně nebyly uloženy změny..
        // alespon ne v tom co by se zobrazovalo
@@ -112,21 +112,21 @@ It feels like you don't want to`);
   sendData(data: any){
     this.placesService.data = data;
   }
-  fetchData(countries: any){
-    this.countriesDataArray = [];
-    for(var c of countries){
+  fetchData(animals: any){
+    this.animalsDataArray = [];
+    for(var c of animals){
       //přidat si sem nejakou api ... nevím kde ji získat někde na gitu
       // zde: https://github.com/public-apis/public-apis
        const url = `https://restcountries.com/v3.1/name/${c.label}`;
        this.http.get(url).subscribe(data =>  {
         console.log(data);
-        this.countriesDataArray.push(data);
+        this.animalsDataArray.push(data);
         
         //přídáno:
         const saveStoredItems =async () => {
           await Preferences.set({
             key:"homeFetchData",
-            value: JSON.stringify(this.countriesDataArray)
+            value: JSON.stringify(this.animalsDataArray)
           });
           
         }
@@ -134,7 +134,7 @@ It feels like you don't want to`);
         saveStoredItems();
         //po sem
        });
-       console.warn(this.countriesDataArray);
+       console.warn(this.animalsDataArray);
     }
     console.log("Load data from API")
   }
