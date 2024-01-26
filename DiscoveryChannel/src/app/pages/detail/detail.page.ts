@@ -10,11 +10,16 @@ import { PlacesService } from 'src/app/services/places/places.service';
 export class DetailPage implements OnInit {
   allData: any; //new
   imageURL: string ="empty";
+  /*
   myDomain: string ="empty";
   flagIMG: string ="empty";
-  startOfWeek: string ="empty";
-  population: string ="empty";
-  region: string ="empty";
+  */
+  name: string ="empty";
+  species: string ="empty";
+  habitat: string ="empty";
+  weight_kg: string ="empty";
+  height_cm: string ="empty";
+  description: string ="empty";
 
   constructor(
     private placeService: PlacesService //new
@@ -26,18 +31,21 @@ export class DetailPage implements OnInit {
     console.log("All data");
     console.log(this.allData);
 
-    const url = this.allData.coatOfArms.png;
+    const url = this.allData.image;
     this.imageURL = url;
 
-    this.myDomain = this.allData.tld[0];
+    /*this.myDomain = this.allData.tld[0];
     console.log(url);
-
-    const flags = this.allData.flags.png;
+    */
+    /*const flags = this.allData.image;
     this.flagIMG = flags;
-
-    this.startOfWeek=this.allData.startOfWeek;
-    this.population=this.allData.population.toString();
-    this.region=this.allData.region;
+    */
+    this.name=this.allData.name;
+    this.species=this.allData.species;
+    this.habitat=this.allData.habitat;
+    this.weight_kg=this.allData.weight_kg;
+    this.height_cm=this.allData.height_cm;
+    this.description=this.allData.description;
     NgControlStatusGroup
   }
 

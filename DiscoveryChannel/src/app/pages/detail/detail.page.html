@@ -1,43 +1,43 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>detail</ion-title>
+    <ion-title>Detail</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">detail</ion-title>
+      <ion-title size="large">Detail</ion-title>
     </ion-toolbar>
   </ion-header>
 <div class="sideBySide">
-  <h1 class="header">{{allData.name.common}}</h1>
+  <h1 class="header">{{allData.name}}</h1>
   <img class="detailImage" src={{imageURL}}>
 </div>
   <div id="columns">
     <div id="right">
-      <caption>WEEK START:</caption>
-      <h2>{{startOfWeek}}</h2>
-      <caption>REGION:</caption>
-      <h2>{{region}}</h2>
-      <caption>POPULATION:</caption>
-      <h2>{{population}}</h2>
-      <caption>MAIN CITY:</caption>
-      <h2>Data</h2>
+      <caption>NAME of ANIMAL:</caption>
+      <h2>{{name}}</h2>
+      <caption>SPECIES:</caption>
+      <h2>{{species}}</h2>
+      <caption>HABITANT:</caption>
+      <h2>{{habitat}}</h2>
+      <!--<caption>MAIN CITY:</caption>
+      <h2>Data</h2>-->
     </div>
     <div>
-      <caption>WEEK START:</caption>
-      <h2>{{startOfWeek}}</h2>
-      <caption>REGION:</caption>
-      <h2>{{region}}</h2>
-      <caption>POPULATION:</caption>
-      <h2>{{population}}</h2>
-      <caption>MAIN CITY:</caption>
-      <h2>Data</h2>
+      <caption>AVERAGE WEIGHT:</caption>
+      <h2>{{weight_kg}}</h2>
+      <caption>AVERAGE HEIGHT:</caption>
+      <h2>{{height_cm}}</h2>
+      <caption>DESCRIPTION:</caption>
+      <h2>{{description}}</h2>
+      <!--<caption>MAIN CITY:</caption>
+      <h2>Data</h2>-->
     </div>
   </div>
-  <h1>{{myDomain}}</h1>
-  <img src={{flagIMG}}>
+  <!--<h1>{{myDomain}}</h1>
+  <img src={{flagIMG}}>-->
   <style>
     .sideBySide{
       display: flex;
