@@ -117,7 +117,7 @@ It feels like you don't want to`);
     for(var c of animals){
       //přidat si sem nejakou api ... nevím kde ji získat někde na gitu
       // zde: https://github.com/public-apis/public-apis
-       const url = `https://restcountries.com/v3.1/name/${c.label}`;
+       const url = `https://freetestapi.com/api/v1/animals?search=${c.label}`;
        this.http.get(url).subscribe(data =>  {
         console.log(data);
         this.animalsDataArray.push(data);

@@ -10,11 +10,11 @@ import { Preferences } from '@capacitor/preferences';
 export class PcvikoComponent {
 
   items = [
-    { label: "Czechia", checked: false },
-    { label: "Slovakia", checked: false },
-    { label: "Deutschland", checked: false },
-    { label: "Poland", checked: false },
-    { label: "United Kingdom", checked: false }
+    { label: "Lion", checked: false },
+    { label: "Elephant", checked: false },
+    { label: "Tiger", checked: false },
+    { label: "Kangaroo", checked: false },
+    { label: "Gorilla", checked: false }
   ];
 
   constructor(private modalCTRL: ModalController) {
@@ -64,11 +64,11 @@ export class PcvikoComponent {
   }
   private getItems() {
     return [
-      { label: 'Czechia', checked: false },
-      { label: "Slovakia", checked: false },
-      { label: "Deutschland", checked: false },
-      { label: "Poland", checked: false },
-      { label: "United Kingdom", checked: false }
+      { label: 'Lion', checked: false },
+      { label: "Elephant", checked: false },
+      { label: "Tiger", checked: false },
+      { label: "Kangaroo", checked: false },
+      { label: "Gorilla", checked: false }
     ];
   }
 }

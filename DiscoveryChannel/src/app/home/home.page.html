@@ -8,12 +8,12 @@
 
 <ion-content [fullscreen]="true">
   <div>
-    <!--dodělat overflow aby bylo scroll tlacitko-->>
+    <!--dodělat overflow aby bylo scroll tlacitko-->
     <div style="max-height: 100px"  *ngIf="animalsDataArray.length > 0">
       <h2 align="middle">Your selected animals:</h2>
       <ion-item *ngFor="let item of animalsDataArray">
-        <ion-item [routerLink]="['/detail',item[0].capital[0]]" (click)="sendData(item)">
-          {{item[0].name.common}}
+        <ion-item [routerLink]="['/detail',item[0].name]" (click)="sendData(item)">
+          {{item[0].name}}
         </ion-item>
         <ion-button id="znacka" fill="clear" size="small">
           <ion-icon slot="start" name="star"></ion-icon>
