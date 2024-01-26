@@ -9,9 +9,9 @@
 <ion-content [fullscreen]="true">
   <div>
     <!--dodělat overflow aby bylo scroll tlacitko-->>
-    <div style="max-height: 100px"  *ngIf="countriesDataArray.length > 0">
-      <h2 align="middle">Your selected countries:</h2>
-      <ion-item *ngFor="let item of countriesDataArray">
+    <div style="max-height: 100px"  *ngIf="animalsDataArray.length > 0">
+      <h2 align="middle">Your selected animals:</h2>
+      <ion-item *ngFor="let item of animalsDataArray">
         <ion-item [routerLink]="['/detail',item[0].capital[0]]" (click)="sendData(item)">
           {{item[0].name.common}}
         </ion-item>
