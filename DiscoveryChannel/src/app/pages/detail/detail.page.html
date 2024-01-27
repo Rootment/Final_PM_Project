@@ -16,22 +16,22 @@
 </div>
   <div id="columns">
     <div id="right">
-      <caption>NAME of ANIMAL:</caption>
-      <h2>{{name}}</h2>
+      <!--<caption>NAME of ANIMAL:</caption>
+      <h2>{{name}}</h2>-->
       <caption>SPECIES:</caption>
       <h2>{{species}}</h2>
-      <caption>HABITANT:</caption>
-      <h2>{{habitat}}</h2>
+      <caption>AVERAGE WEIGHT:</caption>
+      <h2>{{weight_kg}}</h2>
+      <caption>DESCRIPTION:</caption>
+      <h2 id="Desc">{{description}}</h2>
       <!--<caption>MAIN CITY:</caption>
       <h2>Data</h2>-->
     </div>
     <div>
-      <caption>AVERAGE WEIGHT:</caption>
-      <h2>{{weight_kg}}</h2>
+      <caption>HABITANT:</caption>
+      <h2>{{habitat}}</h2>
       <caption>AVERAGE HEIGHT:</caption>
       <h2>{{height_cm}}</h2>
-      <caption>DESCRIPTION:</caption>
-      <h2>{{description}}</h2>
       <!--<caption>MAIN CITY:</caption>
       <h2>Data</h2>-->
     </div>
@@ -76,6 +76,13 @@
       width: 12rem;
       border-radius: 6px;
       padding: 0.3rem;
+    }
+    #Desc{
+      margin: 2rem; /* Doubled the margin value */
+      background: rgb(248, 145, 48);
+      width: 24rem; /* Doubled the width value */
+      border-radius: 12px; /* Doubled the border-radius value */
+      padding: 0.6rem; /* Doubled the padding value */
     }
     @media only screen and (max-width: 700px){
       #columns {
