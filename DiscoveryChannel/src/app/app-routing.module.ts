@@ -16,6 +16,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/detail/detail.module')
     .then( m => m.DetailPageModule)
   },
+  {
+    path: 'dark-mode-toggle',
+    loadChildren: () => import('./dark-mode-toggle/dark-mode-toggle.module').then( m => m.DarkModeTogglePageModule)
+  },
 ];
 
 @NgModule({

@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: '3.cviko',
+  appId: 'com.example.app',
+  appName: 'DiscoverAnimals',
   webDir: 'www',
   server: {
     androidScheme: 'https'

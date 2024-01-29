@@ -10,8 +10,10 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
+import { DarkModeTogglePage } from './dark-mode-toggle/dark-mode-toggle.page';
+
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,DarkModeTogglePage],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, ServiceWorkerModule.register('ngsw-worker.js', {
   enabled: !isDevMode(),
   // Register the ServiceWorker as soon as the application is stable

@@ -1,3 +1,46 @@
-<ion-app>
+<ion-app [class.dark-mode]="darkMode">
   <ion-router-outlet></ion-router-outlet>
 </ion-app>
+
+<!--verze 1
+  <ion-split-pane contentId="main-content">
+  <app-dark-mode-toggle slot="end"></app-dark-mode-toggle>
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+</ion-split-pane>--> 
+
+<!--verze 2
+  <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <app-dark-mode-toggle></app-dark-mode-toggle>
+    </ion-buttons>
+    <ion-title>
+      Your App Title
+    </ion-title>
+  </ion-toolbar>
+</ion-header>-->
+
+<!--verze 3
+<ion-split-pane contentId="main-content">
+  <app-dark-mode-toggle slot="end"></app-dark-mode-toggle>
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+</ion-split-pane>-->
+
+<!--verze 4
+<ion-header>
+  <ion-toolbar>
+    <ion-toggle slot="end" [enableOnOffLabels]="true">
+      <app-dark-mode-toggle></app-dark-mode-toggle>
+    </ion-toggle>
+  </ion-toolbar>
+</ion-header>-->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-item>
+      <ion-toggle justify="start" aria-label="Medium toggle" color="medium" [checked]="true" (ionChange)="toggleDarkMode()"> 
+        <app-dark-mode-toggle></app-dark-mode-toggle>
+      </ion-toggle>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
